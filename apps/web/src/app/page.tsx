@@ -31,21 +31,23 @@ export const metadata: Metadata = {
   title: "Web - Turborepo Example",
 };
 
-export default function Home() {
+export default function Home() 
+
+{
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <main className="mx-auto w-auto px-4 pb-8 pt-16 sm:pt-24 lg:px-8">
-        <h1 className="mx-auto text-center text-6xl font-extrabold tracking-tight text-white sm:text-7xl lg:text-8xl xl:text-8xl">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <main className="w-auto px-4 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
+        <h1 className="mx-auto text-6xl font-extrabold tracking-tight text-center text-white sm:text-7xl lg:text-8xl xl:text-8xl">
           Web
-          <span className="from-brandred to-brandblue block bg-gradient-to-r bg-clip-text px-2 text-transparent">
+          <span className="block px-2 text-transparent from-brandred to-brandblue bg-gradient-to-r bg-clip-text">
             Turborepo Example
           </span>
         </h1>
-        <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
+        <div className="max-w-xl mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
           <Button>Example button</Button>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 place-content-evenly gap-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 mt-12 place-content-evenly sm:grid-cols-3">
           {CARD_CONTENT.map((card) => (
             <Card key={card.title} {...card}>
               <CardHeader>
