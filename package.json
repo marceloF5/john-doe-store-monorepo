@@ -6,11 +6,14 @@
     "lint": "turbo lint",
     "clean": "turbo clean",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "ds:add": "yarn --filter ds ds:add"
+    "ds:add": "yarn --filter ds ds:add",
+    "postinstall": "husky install"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
+    "husky": "^8.0.3",
+    "pinst": "^3.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
     "turbo": "latest"
