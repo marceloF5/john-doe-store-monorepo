@@ -1,24 +1,22 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "clean": "turbo clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "ds:add": "yarn --filter ds ds:add"
-  },
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "*",
-    "pinst": "^3.0.0",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "latest"
-  },
-  "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+    "private": true,
+    "scripts": {
+        "build": "turbo build",
+        "dev": "turbo dev",
+        "lint": "turbo lint",
+        "clean": "turbo clean",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "ds:add": "yarn --filter ds ds:add"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "eslint-config-custom": "*",
+        "pinst": "^3.0.0",
+        "turbo": "latest"
+    },
+    "packageManager": "yarn@1.22.19",
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ]
 }
