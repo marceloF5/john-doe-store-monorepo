@@ -6,13 +6,15 @@
         "lint": "turbo lint",
         "clean": "turbo clean",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "ds:add": "yarn --filter ds ds:add"
+        "ds:add": "yarn --filter ds ds:add",
+        "prepare": "husky install"
     },
     "devDependencies": {
         "eslint": "^7.32.0",
         "eslint-config-custom": "*",
         "pinst": "^3.0.0",
-        "turbo": "latest"
+        "turbo": "latest",
+        "husky": "^8.0.0"
     },
     "packageManager": "yarn@1.22.19",
     "workspaces": [
