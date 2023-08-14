@@ -6,8 +6,7 @@
         "lint": "turbo lint",
         "clean": "turbo clean",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "ds:add": "yarn --filter ds ds:add",
-        "prepare": "husky install"
+        "ds:add": "yarn --filter ds ds:add"
     },
     "devDependencies": {
         "eslint": "^7.32.0",
