@@ -11,13 +11,18 @@
     "devDependencies": {
         "eslint": "^7.32.0",
         "eslint-config-custom": "*",
+        "husky": "^8.0.0",
+        "lint-staged": "^14.0.0",
         "pinst": "^3.0.0",
-        "turbo": "latest",
-        "husky": "^8.0.0"
+        "turbo": "latest"
     },
     "packageManager": "yarn@1.22.19",
     "workspaces": [
         "apps/*",
         "packages/*"
-    ]
+    ],
+    "lint-staged": {
+        "apps/**/*.{js,jsx,ts,tsx}": ["eslint --fix"],
+        "packages/**/*.{js,jsx,ts,tsx}": ["eslint --fix"]
+    }
 }
