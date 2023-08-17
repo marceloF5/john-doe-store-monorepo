@@ -1,0 +1,56 @@
+name: Example Workflow
+on:  
+  pull_request:
+    branches:
+      - main
+    types: [ labeled ]
+jobs:
+  job1:
+    name: Example Job 1
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sleep and Run
+      run: |
+        echo "Sleeping for 10"
+        sleep 10
+
+  job2:
+    name: Example Job 2
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dependant is Running
+      run: |
+        echo "Completed job 2, but triggering failure"
+        exit 1
+
+  job3:
+    name: Example Job 3
+    needs: job1
+    if: contains(github.event.pull_request.labels.*.name, 'bug')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sleep and Run
+      run: |
+        echo "Sleeping JOB3 for 20 - BUG"
+        sleep 10
+
+  job4:
+    name: Example Job 4
+    needs: job2
+    if: contains(github.event.pull_request.labels.*.name, 'feature')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Will never run
+      run: |
+        echo "If you can read this, the experiment failed"
+
+  job5:
+    name: Example Job 5
+    needs: job1
+    if: contains(github.event.pull_request.labels.*.name, 'feature')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sleep and Run
+      run: |
+        echo "Sleeping JOB3 for 20 - FEATURE"
+        sleep 10
