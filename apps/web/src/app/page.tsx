@@ -1,13 +1,13 @@
-import { Metadata } from 'next'
 import {
     Button,
     Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
     CardHeader,
     CardTitle,
-    CardDescription,
-    CardContent,
-    CardFooter,
 } from 'ds'
+import { Metadata } from 'next'
 
 const CARD_CONTENT = [
     {
